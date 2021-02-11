@@ -1,10 +1,10 @@
 <template>
   <div class="hello">
     <div class="jumbotron container">
-      <i class="fab icon hover-zoom fa-github"></i>
-      <i class="fab hover-zoom icon fa-linkedin-in"></i>
-      <i class="fab icon hover-zoom fa-facebook"></i>
-      <i class="fab hover-zoom icon fa-redhat"></i>
+      <i class="fab icon fa-vuejs"></i>
+      <i class="fab icon fa-angular"></i>
+      <i class="fab icon fa-mdb"></i>
+      <i class="fab icon fa-npm"></i>
     </div>
     <br />
     <h1>{{ msg }}</h1>
@@ -221,7 +221,7 @@ a {
   color: #42b983;
 }
 .icon {
-  font-size: 32px;
+  font-size: 36px;
   color: grey;
   letter-spacing: 24px;
 }
