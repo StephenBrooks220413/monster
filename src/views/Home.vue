@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img src="../assets/logo.png" class="img-fluid" alt="logo" />
+    <img src="../assets/logo.png" alt="logo" />
     <div class="container">
       <hr />
       <HelloWorld msg="Welcome to Your Vue.js + TypeScript Developer" />
