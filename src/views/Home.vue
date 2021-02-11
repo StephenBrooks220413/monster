@@ -3,7 +3,7 @@
     <div class="jumbotron">
       <img src="../assets/logo.png"
          alt="logo"
-         width="240px"
+         width="330px"
       />
     </div>
     <div class="container text-center">
