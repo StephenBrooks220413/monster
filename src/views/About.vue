@@ -70,10 +70,11 @@
   height: auto;
 
   span {
-    border: 1px solid blue;
-    background-color: blue;
-    padding: 15px;
+    border: 1px solid lightblue;
+    background-color: lightblue;
+    padding: 10px;
     font-weight: bold;
+    opacity: 0.7;
   }
 }
 .content-2 {
@@ -87,7 +88,7 @@
     border: 1px solid rgb(158, 158, 168);
     background-color: rgb(166, 166, 173);
     opacity: 0.7;
-    padding: 15px;
+    padding: 10px;
   }
 }
 .content-3 {
@@ -101,7 +102,7 @@
     border: 1px solid rgb(150, 211, 235);
     background-color: rgb(150, 211, 235);
     opacity: 0.7;
-    padding: 15px;
+    padding: 10px;
   }
 }
 .content-4 {
@@ -115,7 +116,7 @@
     border: 1px solid rgb(150, 235, 164);
     background-color: rgb(150, 235, 164);
     opacity: 0.7;
-    padding: 15px;
+    padding: 10px;
   }
 }
 .max {
