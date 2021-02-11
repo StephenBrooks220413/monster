@@ -83,13 +83,11 @@
           <!-- Left links -->
 
           <!-- Search form -->
-          <div class="d-flex w-auto">
-            <img
-              src="https://cdn.pixabay.com/photo/2014/10/05/19/02/binary-code-475664__340.jpg"
-              alt="image"
-              width="140px;"
-            />
-          </div>
+          <!--<div class="d-flex w-auto">
+            <a href="#" target="_blank" >
+              Accounts
+            </a>
+          </div> -->
         </div>
         <!-- Collapsible wrapper -->
       </div>

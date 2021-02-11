@@ -144,6 +144,6 @@ export default class Home extends Vue {}
 
 <style scoped>
 div.home img {
-  height: 550px;
+  height: 650px;
 }
 </style>

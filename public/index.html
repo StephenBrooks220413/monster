@@ -35,6 +35,8 @@
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
+    <br><br>
+    <div id='my-store-23322039'></div>
     <br>
       <div class="container text-center">
         <div class="contact-bg">
@@ -68,5 +70,111 @@
     type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.2.0/mdb.min.js"
     ></script>
+    <script>
+      (function (storeId) {
+        document.addEventListener("pageChange", function () {
+          loadEcwid();
+        }, false);
+        loadEcwid();
+
+        function loadEcwid() {
+          var containerId = 'my-store-' + storeId;
+          var container = document.getElementById(containerId);
+          var isEcwidPage = container != null;
+          var ecwidLoaded = isEcwidPage && container.childNodes.length > 0;
+          if (ecwidLoaded && isEcwidPage) return;
+          if (!isEcwidPage) {
+            window.ecwid_nocssrewrite = true;
+            initEcwidIfNecessary(document.body);
+            return;
+          }
+
+          window.ecwid_script_defer = true;
+          window.ecwid_dynamic_widgets = true;
+          window.css_selectors_prefix = encodeURIComponent('div#' + containerId);
+
+          initEcwidIfNecessary(container, true);
+        }
+
+        function initializeScripts() {
+          var initializationScripts = [{
+            "widgetType": "ProductBrowser",
+            "id": "my-store-" + storeId,
+            "arg": ["categoriesPerRow=3", "views=grid(20,3) list(60) table(60)", "categoryView=grid", "searchView=list", "id=my-store-" + storeId, "defaultProductId=" + getValueSave("my-store-" + storeId, "data-default-product-id"), "defaultCategoryId=" + getValueSave("my-store-" + storeId, "data-default-category-id")]
+          }];
+          if (document.getElementById('my-search-' + storeId)) {
+            initializationScripts.push({
+              "widgetType": "SearchWidget",
+              "id": "my-search-" + storeId,
+              "arg": ["id=my-search-" + storeId]
+            });
+          }
+          if (document.getElementById('my-categories-' + storeId)) {
+            initializationScripts.push({
+              "widgetType": "CategoriesV2",
+              "id": "my-categories-" + storeId,
+              "arg": ["id=my-categories-" + storeId]
+            });
+          }
+          window._xnext_initialization_scripts = initializationScripts;
+        }
+
+        function initEcwidIfNecessary(container, reset) {
+          if (typeof Ecwid != 'undefined') {
+            if (reset) {
+              Ecwid.destroy();
+              initializeScripts();
+            }
+
+            ecwid_onBodyDone();
+            Ecwid.init();
+          } else {
+            initializeScripts();
+
+            var script = document.createElement('script');
+            script.charset = 'utf-8';
+            script.type = 'text/javascript';
+            script.id = 'ecwid-script';
+            script.onload = function() {
+              Ecwid.init()
+            };
+            script.src = 'https://app.ecwid.com/script.js?' + storeId;
+            container.appendChild(script);
+          }
+        }
+
+        // init watch function
+        window.onload = watch;
+
+        function watch() {
+          var observedAttributeName = "id";
+          MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+          var a = new MutationObserver(function (a) {
+            var dispatchedId;
+            for (var b = 0; b < a.length; b++) {
+              var c = a[b];
+              if ("attributes" === c.type) {
+                var targetId = c.target[observedAttributeName];
+                if (dispatchedId && dispatchedId === targetId) return;
+                dispatchedId = targetId;
+                var d = new Event("pageChange");
+                document.dispatchEvent(d)
+              }
+            }
+          });
+          a.observe(document.body, {attributes: !0, attributeFilter: [observedAttributeName]})
+        }
+
+        function getValueSave(id, attribute) {
+          var node = document.querySelector("#" + id);
+          return !node
+            ? ""
+            : (!node.getAttribute(attribute)
+              ? ""
+              : node.getAttribute(attribute))
+        }
+      })(23322039);
+    </script>
+
   </body>
 </html>
