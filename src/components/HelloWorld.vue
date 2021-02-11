@@ -8,16 +8,16 @@
     </div>
     <br />
     <h1>{{ msg }}</h1>
-    <p>
+    <p itemscope itemid="author">
       For a guide and to see some templates, email me I will be happy to provide
       <br />
-      some. I understand you want your site to llok great, and I want to be sure
+      some. I understand you want your site to look great, and I want to be sure
       <br />
       how I can help you.
       <a href="mailto:stephenbrooks714@gmail.com">Message Us</a>
     </p>
     <br /><br /><br />
-    <div class="container">
+    <div class="container" itemtype="app plugins">
       <div class="row content-bg">
         <div class="col-md-4">
           <h3>
@@ -166,7 +166,7 @@
         <li>MDB5</li>
       </ul>
       <br />
-      <div class="row">
+      <div class="row" itemid="article">
         <div class="col-md-4">
           <b>HTML</b> is the frame and language that the web browsers read and
           also the most basic one to learn. It lays out content and helps with
@@ -226,7 +226,8 @@ a {
   letter-spacing: 24px;
 }
 .content-bg {
-  background: url(https://i.stack.imgur.com/dWIW2.jpg) no-repeat center center fixed;
+  background: url(https://i.stack.imgur.com/dWIW2.jpg) no-repeat center center
+    fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
