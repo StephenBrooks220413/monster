@@ -32,7 +32,12 @@
             </li>
             <li class="nav-item">
               <router-link class="nav-link" to="/services">
-                Services
+                Pricing
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/catalog">
+                Catalog
               </router-link>
             </li>
             <!-- Navbar dropdown -->
