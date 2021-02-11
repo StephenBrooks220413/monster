@@ -1,7 +1,12 @@
 <template>
   <div class="home">
-    <img src="../assets/logo.png" alt="logo" />
-    <div class="container">
+    <div class="jumbotron">
+      <img src="../assets/logo.png"
+         alt="logo"
+         width="300px"
+      />
+    </div>
+    <div class="container text-center">
       <hr />
       <HelloWorld msg="Welcome to Your Vue.js + TypeScript Developer" />
       <br /><br /><br /><br />
@@ -142,8 +147,11 @@ import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 export default class Home extends Vue {}
 </script>
 
+<<<<<<< HEAD
 <style scoped>
 div.home img {
   height: 650px;
 }
 </style>
+=======
+>>>>>>> 2472ed64f148a97153c732530caccef6a66fc1ba
