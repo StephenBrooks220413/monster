@@ -1,7 +1,12 @@
 <template>
   <div class="home">
+    <div class="jumbotron">
+      <img src="../assets/logo.png"
+         alt="logo"
+         width="300px"
+      />
+    </div>
     <div class="container text-center">
-     <img src="../assets/logo.png" alt="logo" />
       <hr />
       <HelloWorld msg="Welcome to Your Vue.js + TypeScript Developer" />
       <br /><br /><br /><br />
