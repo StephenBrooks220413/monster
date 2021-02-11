@@ -180,8 +180,8 @@
           frameworks still rely on css.
         </div>
         <div class="col-md-4">
-          <b>Vue & TypeScript</b> are the frameworks we'll be using for the
-          majority of the courses. A few will be with
+          <b>Vue & TypeScript</b> are the frameworks I'll be using for the
+          majority of the websites. A few will be with
           <em>asp.Net Core</em> using C#, but in reality the language or
           framework you use depends on the client, employer, or even the project
           type.
