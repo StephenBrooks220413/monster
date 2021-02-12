@@ -18,7 +18,7 @@
                 <img
                   src="https://dev-search-bar.netlify.app/images/ds_circle_logo.png"
                   alt="Paris"
-                  style="width:100%;"
+                  style="width: 70%;"
                 />
               </div>
               <div class="flip-box-back">
@@ -147,7 +147,7 @@
                 <img
                   src="https://devvuer.netlify.app/img/logo.82b9c7a5.png"
                   alt="Paris"
-                  style="width:100%;"
+                  style="width:70%;"
                 />
               </div>
               <div class="flip-box-back">
@@ -409,14 +409,12 @@
 
 <style lang="scss" scoped>
 .content-block {
-  background-color: black;
   width: 100%;
   height: auto;
   padding-top: 30px;
   padding-bottom: 30px;
-  color: white;
   letter-spacing: 7px;
-  opacity: 0.9;
+  margin-top: 40px;
 }
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
@@ -454,7 +452,7 @@
 
 /* Style the front side (fallback if image is missing) */
 .flip-box-front {
-  background-color: #bbb;
+  background-color: #ffffff;
   color: black;
 }
 
